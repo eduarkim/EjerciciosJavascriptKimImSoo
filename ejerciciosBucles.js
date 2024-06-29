@@ -65,17 +65,7 @@ y por el mismo numero. Ayuda: Usar la operacion de modulo. Los numeros solo pose
 valor del mismo. Ej: 50 tiene como divisores 1, 2, 5, 10, 25. No es primo. Con tener mas de 2 divisores el numero 
 ya no es primo, usando el for
 */
-/*
-let numero = parseInt(prompt("ingrese numero: "))
-let divisor = 1, contador=0;
-while(divisor <= numero){
-    if(numero% divisor ==0){
-        contador++;
-    }
-    divisor++;
-}
-contador == 2 ? console.log("El numero es primo") : console.log("El numero no es primo")
-*/
+
 /*
 let numero = parseInt(prompt("Ingrese un numero: "))
 let divisor =0;
@@ -91,17 +81,8 @@ alert(numero+" es numero primo")
 alert(numero+ " No es numero primo")
 }
 */
-//  SIN EL FOR
-/*
-let numero = parseInt(prompt("Ingrese un número: "))
 
-if(numero%numero==0 && numero%1==0 && numero%2!=0 && numero!=1 || numero==2 ){
-        console.log(numero+" Es numero primo")
-   
-  }else{
-      console.log(numero+" no es numero primo")
-  }
-*/
+
 
 //----------------------------------------------------------------------------------
 /*
@@ -115,8 +96,9 @@ for(let i=1; i<=Numero; i++){
       divisores.push(i)
    }
 }
-alert("Los divisores de "+numero+" son: "+divisores)
+alert("Los divisores de "+Numero+" son: "+divisores)
 */
+
 //------------------------------------------------------------------------------------------
 /*
 6.Dado un array de 10 elementos, realizar un programa que recorra ese array y muestre un mensaje
@@ -146,7 +128,6 @@ for(let i=0; i<arrayNros.length; i++){
 persona con al menos 4 propiedades, realizar un programa que muestre un mensaje de presentacion por cada elemento
 del array.
 */
-
 
 /*
 let familia =[
@@ -187,6 +168,8 @@ for(let i=0; i<familia.length; i++){
 }
 */
 //-------------------------------------------------------------------------------------------------------
+
+
 /*
 9. Dado un array de 10 numeros, realizar un programa que recorra el array y solo muestre los numeros impares.
 */
@@ -200,13 +183,13 @@ for(let i=0; i<arrayNro.length; i++){
     }
 }
 */
+
+
 //------------------------------------------------------------------------------------------------------
 /*
 10.Realizar un programa que permita la entrada de numeros y calcule la suma de los numeros pares por un lado
 y los impares por otro, el ingreso de dato finaliza cuando el usuario ingresa un 0
    */
-
-
 
 // CON WHILE
 /*
@@ -253,7 +236,7 @@ console.log("El número más grande es: "+maximo)
 
 
 /*
-let arraynumeros = [11,200,50,2,300,555,289,10,20,5.800];
+let arraynumeros = [11,200,50,22,300,555,289,10,20,5.8];
 let minimo=arraynumeros[0];
 for(let i=0; i<arraynumeros.length; i++){
    if(arraynumeros[i]<minimo){
@@ -283,7 +266,6 @@ let nombre2 = prompt("Jugador 2, ingrese su nombre: ")
 let jugador1=0;
 let jugador2=0;
 
-
 while(jugador1===jugador2){
     jugador1= parseInt(prompt("Jugador 1: Ingrese su opción en números: 1(piedra), 2(papel) o 3(tijera): "))
     jugador2= parseInt(prompt("Jugador 2: Ingrese su opción en números: 1(piedra), 2(papel) o 3(tijera):"))
@@ -311,14 +293,13 @@ while(jugador1===jugador2){
 14. Realizar un programa que imprima por consola un triangulo de 5 asteriscos de lado
    */
 
-
 /*  
 let asterisco = "* "
 for(let i=1; i<=5; i++){
     console.log(asterisco);
     asterisco = asterisco + "* "
 }
-*/   
+*/ 
 
 
 //---------------------------------------------------------------------------------------------
