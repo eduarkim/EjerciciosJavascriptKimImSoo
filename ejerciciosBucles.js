@@ -11,6 +11,7 @@ let numero1 = parseInt(prompt("Ingrese el número al que desee conocer su múlti
 for(let i=1; i<=10; i++){
     console.log(numero1 + " * " + i + " = " + numero1*i)
 }
+
 */
 //----------------------------------------------------------------------------------------------
 /*
@@ -22,13 +23,13 @@ El ingreso de datos terminara cuando el usuario ingrese un valor 0.
 /*
 let suma=0;
 let numero;
-while(numero2!=0){
-    numero2 = parseInt(prompt("Ingrese un número: "));
-        suma = suma + numero;
-        
+while(numero!=0){
+    numero = parseInt(prompt("Ingrese un número: "));
+        suma = suma + numero;       
 }
-console.log("La suma de los números ingresados es: "+suma);
+alert("La suma de los números ingresados es: "+suma);
 */
+
 //----------------------------------------------------------------------------------------------
 /*
 3. Realizar un juego de adivinar el número de los ejercicios del tema anterior, en una variable guardar 
@@ -38,8 +39,9 @@ y pedirle nuevamente el ingreso de otro numero, realizar la misma accion pero en
 si es que el numero ingresado es mayor. Así sucesivamente hasta que el usuario ingrese el numero secreto.
 Por último mostrar un mensaje de felicitaciones al usuario y decirle en cuantos intentos lo ha realizado.
 */
-/*
+
 //  MEDIANTE EL WHILE
+/*
 let nroSecreto = 50;
 let nroUsuario;
 let intentos = 0;
@@ -54,6 +56,8 @@ while(nroUsuario!=nroSecreto){
 }
 alert("Felicidades, has adivinado el número secreto en "+intentos+" intentos");
 */
+
+
 //--------------------------------------------------------------------------------------------------
 /*
 4. Realizar un programa que permita decir si un numero es primo. Un numero es primo solo si es divisible por 1 
