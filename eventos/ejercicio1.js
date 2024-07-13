@@ -8,4 +8,8 @@ boton.addEventListener('click', a => {
 
 })
 
-
+document.getElementById('boton-borrar').addEventListener('click', a=> {
+  document.querySelectorAll('input').forEach(input=>{
+    input.value = '';
+  })
+})
