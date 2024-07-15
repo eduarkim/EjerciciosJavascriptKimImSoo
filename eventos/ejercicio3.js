@@ -95,7 +95,8 @@ let botonguardar = document.getElementById("boton-guardar")
   if(titulo !== "" && texto !== ""){
     agregarNota(titulo, texto);
     document.getElementById("titulo").value ="";  
-    //  pintarTarjetas(nota)
+    document.getElementById('texto').value = '';
+   
   
     }
   })
@@ -134,16 +135,14 @@ document.getElementById('boton-borrar').addEventListener('click', function () {
 function marcarRealizada(id){
   let nota = notas.find(nota => nota.id === id);
   nota.realizada =! nota.realizada;
+  
   pintarTarjetas(notas);
 }
 
 function filtrarPorRealizadas(notas){
+  
   return notas.filter(nota => nota.realizada);
-}
 
-function filtrarPorTexto(notas, texto){
-  if(!texto) return notas;
-  return notas.filter(nota => nota.titulo.includes(texto)|| nota.texto.includes(texto));
 }
 
 // Obtener el checkbox de filtro
