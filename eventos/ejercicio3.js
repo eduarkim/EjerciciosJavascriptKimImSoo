@@ -134,13 +134,14 @@ document.getElementById('boton-borrar').addEventListener('click', function () {
   document.getElementById('texto').value = '';
 });
 
+
+
 function marcarRealizada(id){
   let nota = notas.find(nota => nota.id === id);
   nota.realizada =! nota.realizada;
 
   pintarTarjetas(notas);
 }
-
 
 
 function filtrarPorRealizadas(notas){
@@ -178,3 +179,4 @@ function filtrarPorTexto(notas, texto) {
   if (!texto) return notas;
   return notas.filter(nota => nota.titulo.toLowerCase().includes(texto) || nota.texto.toLowerCase().includes(texto));
 }
+  
