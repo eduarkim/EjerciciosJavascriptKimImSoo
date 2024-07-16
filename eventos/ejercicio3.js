@@ -50,7 +50,7 @@ if(notas.length===0){
         <p class="card-text ${nota.realizada ? 'text-decoration-line-through':''}">${nota.texto}</p>
     </div>
     <div class="card-footer d-flex justify-content-between">
-        <span>${nota.realizada}</span>
+       
       
         <button onClick="borrarNota(${nota.id})" class="btn btn-primary" id="borrar-nota">Borrar nota
        </button>
@@ -69,6 +69,7 @@ if(notas.length===0){
   }
 
 }
+
    //  Llamada inicial para mostrar los primeros 4 objetos
 pintarTarjetas(notas.slice(0, 4));
 // crear una función agregarNota la cual necesitara 2 parametros: titulo y texto. La cual deberá crear un 
