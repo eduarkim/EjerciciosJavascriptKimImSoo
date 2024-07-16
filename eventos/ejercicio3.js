@@ -121,20 +121,12 @@ function borrarNota(id) {
 }
 
 
-
-
-/*
-Agregar una validación en la función que pinta las tarjetas, la cual deberá mostrar 
-un mensaje dentro del div contenedor que diga NO HAY NOTAS PARA MOSTRAR 
-en caso de no haber elementos en el array
-*/
-
 document.getElementById('boton-borrar').addEventListener('click', function () {
   document.getElementById('titulo').value = '';
   document.getElementById('texto').value = '';
 });
 
-
+// filtrar por realizada
 
 function marcarRealizada(id){
   let nota = notas.find(nota => nota.id === id);
@@ -168,7 +160,7 @@ function filtrarPorRealizadas(notas) {
 const filtroTexto = document.getElementById('filtro-texto');
 
 // Agregar el evento input
-filtroTexto.addEventListener('input', () => {
+filtroTexto.addEventListener('keyup', () => {
   const textoFiltro = filtroTexto.value.toLowerCase();
   const notasFiltradas = filtrarPorTexto(notas, textoFiltro);
   pintarTarjetas(notasFiltradas);
