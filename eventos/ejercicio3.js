@@ -25,7 +25,7 @@ let notas=[
         }
 ];
 
-let idGlobal = 4;
+let idGlobal = 5;
 /*
 Agregar una validación en la función que pinta las tarjetas, la cual deberá mostrar 
 un mensaje dentro del div contenedor que diga NO HAY NOTAS PARA MOSTRAR 
@@ -47,7 +47,7 @@ if(notas.length===0){
         <div class="card col">     
     <div class="card-body">
         <h5 class="card-title">${nota.titulo}</h5>
-        <p class="card-text">${nota.texto}</p>
+        <p class="card-text ${nota.realizada ? 'text-decoration-line-through':''}">${nota.texto}</p>
     </div>
     <div class="card-footer d-flex justify-content-between">
         <span>${nota.realizada}</span>
@@ -55,8 +55,9 @@ if(notas.length===0){
         <button onClick="borrarNota(${nota.id})" class="btn btn-primary" id="borrar-nota">Borrar nota
        </button>
 
-       <input onClick="marcarRealizada(${nota.id})" type="checkbox" ${nota.realizada? 
-"checked": ""}>
+       <input onClick="marcarRealizada(${nota.id})" type="checkbox" ${nota.realizada ? 
+"checked" : ""}>
+
     </div>
     
     </div>
@@ -68,8 +69,8 @@ if(notas.length===0){
   }
 
 }
-   
-  
+   //  Llamada inicial para mostrar los primeros 4 objetos
+pintarTarjetas(notas.slice(0, 4));
 // crear una función agregarNota la cual necesitara 2 parametros: titulo y texto. La cual deberá crear un 
 // objeto de tipo nota que sea como el array usado arriba, y agregarlo al array de notas.
 function agregarNota (titulo, texto){
@@ -135,9 +136,11 @@ document.getElementById('boton-borrar').addEventListener('click', function () {
 function marcarRealizada(id){
   let nota = notas.find(nota => nota.id === id);
   nota.realizada =! nota.realizada;
-  
+
   pintarTarjetas(notas);
 }
+
+
 
 function filtrarPorRealizadas(notas){
   
