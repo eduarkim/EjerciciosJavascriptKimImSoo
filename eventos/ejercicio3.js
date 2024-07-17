@@ -156,19 +156,23 @@ function filtrarPorRealizadas(notas) {
   return notas.filter(nota => nota.realizada);
 }
 
+
+
 // Obtener el campo de texto de filtro
 const filtroTexto = document.getElementById('filtro-texto');
 
+
 // Agregar el evento input
-filtroTexto.addEventListener('keyup', () => {
+filtroTexto.addEventListener('input', () => {
   const textoFiltro = filtroTexto.value.toLowerCase();
   const notasFiltradas = filtrarPorTexto(notas, textoFiltro);
   pintarTarjetas(notasFiltradas);
 });
 
 // Función para filtrar por texto
+
 function filtrarPorTexto(notas, texto) {
   if (!texto) return notas;
-  return notas.filter(nota => nota.titulo.toLowerCase().includes(texto) || nota.texto.toLowerCase().includes(texto));
+  return notas.filter(nota => nota.titulo.toLowerCase().includes(texto) || nota.texto.toLowerCase().includes(texto))
 }
-  
+
